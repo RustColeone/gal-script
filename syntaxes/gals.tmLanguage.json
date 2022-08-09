@@ -1,0 +1,102 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "GalScript",
+	"patterns": [
+        {
+			"include": "#comments"
+		},
+        {
+			"include": "#variable"
+		},
+        {
+			"include": "#definition"
+		},
+		{
+			"include": "#bool"
+		},
+		{
+			"include": "#keywords1"
+		},
+        {
+			"include": "#keywords2"
+		},
+        {
+			"include": "#keywords3"
+		},
+        {
+			"include": "#keywords4"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+        "comments": {
+			"name": "comment.control.gals",
+            "begin": "%",
+            "end": "$"
+		},
+		"keywords1": {
+			"patterns": [{
+				"name": "entity.name.function.gals",
+				"match": "/activePrefabComponent|/background|/beginChoices|/character|/choice|/clear|/define|/dummy|/endChoices|/entity"
+			}]
+		},
+        "keywords2": {
+			"patterns": [{
+				"name": "entity.name.function.gals",
+				"match": "/fade|/fadeEntity|/hold|/if|/load|/message|/modeNVL|/move|/music|/notepad"
+			}]
+		},
+        "keywords3": {
+			"patterns": [{
+				"name": "entity.name.function.gals",
+				"match": "/particles|/photo|/profileIcon|/set|/setPosition|/setScene|/setSpeakerName|/shake|/showUI|/skipToAfter"
+			}]
+		},
+        "keywords4": {
+			"patterns": [{
+				"name": "entity.name.function.gals",
+				"match": "/skipToDummy|/sound|/speechFilePath|/style|/styleEntity|/time"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.gals",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.gals",
+					"match": "\\\\."
+				}
+			]
+		},
+        "bool": {
+			"patterns": [{
+				"name": "constant.character.gals",
+				"match": "true|false"
+			}]
+		},
+        "variable": {
+			"name": "variable.parameter.gals",
+			"begin": "(var::|global::)",
+            "end":"$| ",
+            "captures": {
+                "1": {
+                    "name": "entity.name.type.gals"
+                }
+            }
+		},
+        "definition": {
+			"name": "variable.parameter.gals",
+			"begin": "(/define |/set )",
+            "end":"$| ",
+            "captures": {
+                "1": {
+                    "name": "entity.name.function.gals"
+                }
+            }
+		}
+	},
+	"scopeName": "source.gals"
+}

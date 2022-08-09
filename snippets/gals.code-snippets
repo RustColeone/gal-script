@@ -1,0 +1,248 @@
+{
+    "if":
+    {
+        "prefix":"/if",
+        "body":["/if ${1:var_name} ${2:compare} ${3:value}"],
+        "description":"If varname compared with value, do the following"
+    },
+    "/setSpeakerName":
+    {
+        "prefix":"/setSpeakerName",
+        "body":["/setSpeakerName ${1:speaker_name}"],
+        "description":"Change the speaker name under the current context"
+    },
+    "/skipToAfter":
+    {
+        "prefix":"/skipToAfter",
+        "body":["/skipToAfter ${1:line_number}"],
+        "description":"Skip the following line and start at this line"
+    },
+    "/set":
+    {
+        "prefix":"/set",
+        "body":["/set ${1:var_name} ${2:value}"],
+        "description":"Define a variable with a value globally across the entire game"
+    },
+    "/define":
+    {
+        "prefix":"/define",
+        "body":["/define ${1:var_name} ${2:value}"],
+        "description":"Define a variable with a value"
+    },
+    "/setScene":
+    {
+        "prefix":"/setScene",
+        "body":["/setScene ${1:scene_name}"],
+        "description":"Change the current scene to a new one"
+    },
+    "/beginChoices":
+    {
+        "prefix":"/beginChoices",
+        "body":["/beginChoices ${1:choice_count}","\t/choice ${2:choice_text}", "/endChoices"],
+        "description":"Simplified if else statement, however, indication of ending line is required"
+    },
+    "/choice":
+    {
+        "prefix":"choice",
+        "body":["choice ${1:choice_text}"],
+        "description":"Simplified if else statement, however, indication of ending line is required"
+    },
+    "/endChoices":
+    {
+        "prefix":"/endChoices",
+        "body":["/endChoices"],
+        "description":"Indication of Choice Ending"
+    },
+    "/photo":
+    {
+        "prefix":"/photo",
+        "body":["/photo ${1:path_to_image}"],
+        "description":"Show Photo loaded with path"
+    },
+    "/shake":
+    {
+        "prefix":"/shake",
+        "body":["/shake ${1:obj_code_name} ${2:shake_profile}"],
+        "description":"Shake camera(0 para), object(1 para), object with shake profile (2 para)"
+    },
+    "/background":
+    {
+        "prefix":"/background",
+        "body":["/background ${1:path_to_image}"],
+        "description":"change background with path"
+    },
+    "/background_fade":
+    {
+        "prefix":"/background",
+        "body":["/fade in 5", "/hold", "/background Images/Background/${1:path_to_image}", "/setScale background 2", "/fade out 5", "/hold"],
+        "description":"change background with path"
+    },
+    "/profileIcon":
+    {
+        "prefix":"/profileIcon",
+        "body":["/profileIcon ${1:path_to_image} ${2:subSprite}"],
+        "description":"set speaker icon with path(1 para), and sub Sprite if any (2 para)"
+    },
+    "/dummy":
+    {
+        "prefix":"/dummy",
+        "body":["/dummy"],
+        "description":"I am a dummy"
+    },
+    "/move":
+    {
+        "prefix":"/move",
+        "body":["/move ${1:obj_code_name} ${2:x} ${3:y} ${4:z} ${5:is_linear} ${6:speed}"],
+        "description":"find an object with code_name and move that object, this is holdable"
+    },
+    "/setPosition":
+    {
+        "prefix":"/setPosition",
+        "body":["/setPosition ${1:obj_code_name} ${2:x} ${3:y} ${4:z}"],
+        "description":"Teleport that object to specific location"
+    },
+    "/clear":
+    {
+        "prefix":"/clear",
+        "body":["/clear ${1:catagory_code_name}"],
+        "description":"Remove the content under a certain catagory"
+    },
+    "/load":
+    {
+        "prefix":"/load",
+        "body":["/load ${1:path_to_file}"],
+        "description":"Load from script a gals file"
+    },
+    "/fade":
+    {
+        "prefix":"/fade",
+        "body":["/fade ${1:in_out} ${2:speed}"],
+        "description":"Fade in or out, this is holdable"
+    },
+    "/hold":
+    {
+        "prefix":"/hold",
+        "body":["/hold"],
+        "description":"hold untill current comment is done if holdable (move, fade, animation)"
+    },
+    "/hold_with_parameter":
+    {
+        "prefix":"/hold",
+        "body":["/hold ${1:time}"],
+        "description":"hold for a certain amount of time"
+    },
+    "/time":
+    {
+        "prefix":"/time",
+        "body":["/time ${1:time}"],
+        "description":"Change the stage light accordingly"
+    },
+    "/sound":
+    {
+        "prefix":"/sound",
+        "body":["/sound ${1:path_to_sound}"],
+        "description":"play sound"
+    },
+    "/music":
+    {
+        "prefix":"/music",
+        "body":["/music ${1:|play,pause,stop,path_to_music|}"],
+        "description":"Either control music if matched command or load path_to_music"
+    },
+    "/style ez":
+    {
+        "prefix":"/style",
+        "body":["/style ${1:|name,dialogue|}, ${2:font_size_number}"],
+        "description":"Quick change style of display"
+    },
+    "/style":
+    {
+        "prefix":"/style",
+        "body":["/style ${1:|name,dialogue|}, ${1:red_float}, ${2:green_float}, ${3:blue_float}, ${3:transparancy_float}, ${6:font_size_number}"],
+        "description":"Full change style of display on name or dialogue"
+    },
+    "/speechFilePath":
+    {
+        "prefix":"/speechFilePath",
+        "body":["/speechFilePath ${1:path_to_speech}"],
+        "description":"Append this after a text will allow this to be played along with text"
+    },
+    "/character":
+    {
+        "prefix":"/character",
+        "body":["/character ${1:name} ${2:path_to_prefab} ${3:x} ${4:y} ${5:z} ${6:visibility_true_false}"],
+        "description":"Character is depreciated and will now call /entity instead (please replace character with entity soon)"
+    },
+    "/entity_2_parameter":
+    {
+        "prefix":"/entity",
+        "body":["/entity ${1:name} ${2:path_to_prefab}"],
+        "description":"Minimum parameter for entity, initialize a prefab at default position, variable name is required"
+    },
+    "/entity_5_parameter":
+    {
+        "prefix":"/entity",
+        "body":["/entity ${1:name} ${2:path_to_prefab} ${3:x} ${4:y} ${5:z}"],
+        "description":"Initialize a prefab at default position x, y, z"
+    },
+    "/entity_6_parameter":
+    {
+        "prefix":"/entity",
+        "body":["/entity ${1:name} ${2:path_to_prefab} ${3:x} ${4:y} ${5:z} ${6:visibility_true_false}"],
+        "description":"Initialize a prefab at default position x, y, z and set its default visibility"
+    },
+    "/particles":
+    {
+        "prefix":"/particles",
+        "body":["/particles ${1:|rain,snow,flower|} ${2:enable_true_false}"],
+        "description":"Start certain particle system"
+    },
+    "/notepad":
+    {
+        "prefix":"/notepad",
+        "body":["/notepad ${1:enable_true_false} ${2:message}"],
+        "description":"Open the notepad and append message if enabled and has message"
+    },
+    "/styleEntity_4_parameter":
+    {
+        "prefix":"/styleEntity",
+        "body":["/styleEntity ${1:name} ${2:r} ${3:g} ${4:b}"],
+        "description":"style the entity with red green blue, if available"
+    },
+    "/styleEntity_5_parameter":
+    {
+        "prefix":"/styleEntity",
+        "body":["/styleEntity ${1:name} ${2:r} ${3:g} ${4:b} ${5:a}"],
+        "description":"style the entity with red green blue and alpha, if available"
+    },
+    "/fadeEntity":
+    {
+        "prefix":"/fadeEntity",
+        "body":["/fadeEntity ${1:name_of_entity} ${2:visibility_true_false}"],
+        "description":"style the entity with red green blue and alpha, if available"
+    },
+    "/activePrefabComponent":
+    {
+        "prefix":"/activePrefabComponent",
+        "body":["/activePrefabComponent ${1:name_of_entity} ${2:component_name} ${3:visibility_true_false}"],
+        "description":"Find prefab and vertain component, if multiple with same name, find with parent.child"
+    },
+    "/showUI":
+    {
+        "prefix":"/showUI",
+        "body":["/showUI ${1:|true,false|}"],
+        "description":"Turn UI on or OFF, note that when UI is off, user cannot interact with Next"
+    },
+    "/modeNVL":
+    {
+        "prefix":"/modeNVL",
+        "body":["/modeNVL ${1:|true,false|}"],
+        "description":"Change the display mode to NVL"
+    },
+    "/animation":
+    {
+        "prefix":"/animation",
+        "body":["/animation ${1:name_of_animation_object}"],
+        "description":"Play a specific animation (this is holdable)"
+    }
+}
