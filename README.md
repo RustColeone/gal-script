@@ -245,6 +245,20 @@ Example
 /fadeEntity ${1:name_of_entity} ${2:visibility_true_false}
 ```
 
+### /filter
+Apply certain filter to the game
+
+对游戏应用特定滤镜
+
+Example
+```
+/filter ${1:name_of_filter} ${2:enable_true_false}
+```
+
+Available Filters
+- glitch
+- flashback
+
 ### /hold
 
 Waits until a certain action is complete, Or it waits for a specific period of time

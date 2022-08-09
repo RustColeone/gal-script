@@ -39,13 +39,13 @@
 		"keywords1": {
 			"patterns": [{
 				"name": "entity.name.function.gals",
-				"match": "/activePrefabComponent|/animation|/background|/beginChoices|/character|/choice|/clear|/define|/dummy|/endChoices"
+				"match": "/activePrefabComponent|/animation|/background|/beginChoices|/character|/choice|/clear|/define|/dummy"
 			}]
 		},
         "keywords2": {
 			"patterns": [{
 				"name": "entity.name.function.gals",
-				"match": "/entity|/fade|/fadeEntity|/hold|/if|/load|/message|/modeNVL|/move|/music"
+				"match": "/endChoices|/entity|/fade|/fadeEntity|/filter|/hold|/if|/load|/message|/modeNVL|/move|/music"
 			}]
 		},
         "keywords3": {
