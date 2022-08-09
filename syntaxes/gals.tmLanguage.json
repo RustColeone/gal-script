@@ -39,25 +39,25 @@
 		"keywords1": {
 			"patterns": [{
 				"name": "entity.name.function.gals",
-				"match": "/activePrefabComponent|/background|/beginChoices|/character|/choice|/clear|/define|/dummy|/endChoices|/entity"
+				"match": "/activePrefabComponent|/animation|/background|/beginChoices|/character|/choice|/clear|/define|/dummy|/endChoices"
 			}]
 		},
         "keywords2": {
 			"patterns": [{
 				"name": "entity.name.function.gals",
-				"match": "/fade|/fadeEntity|/hold|/if|/load|/message|/modeNVL|/move|/music|/notepad"
+				"match": "/entity|/fade|/fadeEntity|/hold|/if|/load|/message|/modeNVL|/move|/music"
 			}]
 		},
         "keywords3": {
 			"patterns": [{
 				"name": "entity.name.function.gals",
-				"match": "/particles|/photo|/profileIcon|/set|/setPosition|/setScene|/setSpeakerName|/shake|/showUI|/skipToAfter"
+				"match": "/notepad|/particles|/photo|/profileIcon|/set|/setPosition|/setScene|/setSpeakerName|/shake|/showUI"
 			}]
 		},
         "keywords4": {
 			"patterns": [{
 				"name": "entity.name.function.gals",
-				"match": "/skipToDummy|/sound|/speechFilePath|/style|/styleEntity|/time"
+				"match": "/skipToAfter|/skipToDummy|/sound|/speechFilePath|/style|/styleEntity|/time"
 			}]
 		},
 		"strings": {
@@ -74,7 +74,7 @@
         "bool": {
 			"patterns": [{
 				"name": "constant.character.gals",
-				"match": "true|false"
+				"match": "true|false|{TRANSLATE}"
 			}]
 		},
         "variable": {

@@ -239,6 +239,12 @@
         "body":["/modeNVL ${1:|true,false|}"],
         "description":"Change the display mode to NVL"
     },
+    "/message":
+    {
+        "prefix":"/message",
+        "body":["/message ${1:some_message}"],
+        "description":"Display some message in a black banner"
+    },
     "/animation":
     {
         "prefix":"/animation",
