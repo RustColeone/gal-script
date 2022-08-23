@@ -349,6 +349,14 @@ Example
 ```
 
 ```
+/music ${1:|play,pause,stop|} ${2:|path_to_music|}
+```
+
+```
+/music ${1:|fade|} ${2:|duration|} ${3:|targetVolume|} ${4:|shouldPause_true_false|}
+```
+
+```
 /music path_to_music
 /music play
 xxx
