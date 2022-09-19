@@ -268,5 +268,29 @@
         "prefix":"/animation",
         "body":["/animation ${1:name_of_animation_object}"],
         "description":"Play a specific animation (this is holdable)"
+    },
+    "/appendText":
+    {
+        "prefix":"/appendText",
+        "body":["/appendText ${1:text}"],
+        "description":"Holdable, append a text to dialogue box"
+    },
+    "/highlightEntity_1_parameter":
+    {
+        "prefix":"/highlightEntity",
+        "body":["/highlightEntity ${1:name_of_entity_or_all_none}"],
+        "description":"Highlight the specified entity and de-highlight all others"
+    },
+    "/highlightEntity_2_parameter":
+    {
+        "prefix":"/highlightEntity",
+        "body":["/highlightEntity ${1:name_of_entity} ${2:highlignt_true_false}"],
+        "description":"Find specific entity and set highlight or not, will change others on default"
+    },
+    "/highlightEntity_3_parameter":
+    {
+        "prefix":"/highlightEntity",
+        "body":["/highlightEntity ${1:name_of_entity} ${2:highlignt_true_false} ${3:de-highlight_others_true_false}"],
+        "description":"Find specific entity and set highlight or not, specify if should change others"
     }
 }

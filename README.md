@@ -108,6 +108,20 @@ Example
 ```
 /animation ${1:name_of_animation}
 ```
+
+### /appendText
+(Holdable)
+
+Append Text to dialogue box, this is holdable if holded, but does not end hold
+User input required to continue, use in cutscene
+
+在对话框中增加文字，演出中使用
+
+Example
+```
+/appendText ${1:text}
+```
+
 ### /background
 Change the background image
 
@@ -167,6 +181,7 @@ catagory_code_name includes 包括...
 - style（姓名框与对话框字体）
 - speakerName（姓名框）
 - dialogue（对话框）
+- conversation (name + dialogue)（对话，即姓名和对话框）
 - background（背景）
 - particles（粒子效果）
 - entity（所有物体）
@@ -258,6 +273,30 @@ Example
 Available Filters
 - glitch
 - flashback
+
+### /highlightEntity
+Highlight a certain entity and darkens all others
+
+调整生成后的实体的颜色以实现强调作用
+
+Example
+```
+/highlightEntity ${1:name_of_entity_or_all_none}
+```
+Highlight the specified entity and de-highlight all others
+高亮指定实体并且将其他实体调成灰色
+
+```
+/highlightEntity ${1:name_of_entity} ${2:true_false}
+```
+Find specific entity and set highlight or not, will change others on default
+指定实体并指定是否高亮，并且将其他实体调成灰色
+
+```
+/highlightEntity ${1:name_of_entity} ${2:true_false} ${3:true_false}
+```
+Find specific entity and set highlight or not, specify if should change others
+指定实体并指定是否高亮，并且指定是否将其他实体调成灰色
 
 ### /hold
 
